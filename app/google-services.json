@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "465037185854",
+    "project_id": "expense-planner-102db",
+    "storage_bucket": "expense-planner-102db.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465037185854:android:5d03a4547ce043e161926f",
+        "android_client_info": {
+          "package_name": "com.nastel.expenseplanner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRMmaJ6M8kJ54EXnMszwIqJVNwhCU7gB4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

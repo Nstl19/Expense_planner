@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Expense Planner</string>
+    <string name="default_web_client_id">465037185854-timk17q4b75rahtoqcbeaqvd39na0krb.apps.googleusercontent.com</string>
+    <string name="welcome_message">Welcome to Expense Planner</string>
+    <string name="login_button_text">Login</string>
+    <string name="login_prompt_text">Sign up or Login to continue</string>
+    <string name="sign_in_button_text">Sign in with Google</string>
+    <string name="google_logo_description">Google Logo</string>
+</resources>

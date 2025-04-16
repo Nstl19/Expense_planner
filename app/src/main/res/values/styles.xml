@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- Base application theme -->
+    <style name="ExpensePlanner" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">@color/gray</item>
+        <item name="colorPrimaryDark">#086D0B</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="android:windowBackground">@color/white</item>
+
+        <!-- Ensure Buttons Have Proper Styling -->
+        <item name="android:textAppearanceButton">@style/CustomButtonText</item>
+    </style>
+
+    <!-- Custom Button Text Style -->
+    <style name="CustomButtonText" parent="@android:style/TextAppearance.Material.Button">
+        <item name="android:textColor">@color/black</item> <!-- Black text for contrast -->
+        <item name="android:fontFamily">sans-serif</item> <!-- Default system font -->
+        <item name="android:textStyle">bold</item> <!-- Make text bold -->
+        <item name="android:textAllCaps">false</item> <!-- Disable all caps -->
+    </style>
+
+    <!-- Custom Button Style -->
+    <style name="CustomButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/gray</item> <!-- Ensures button uses primary color -->
+        <item name="android:textColor">@android:color/black</item> <!-- Black text for contrast -->
+        <item name="android:textStyle">bold</item> <!-- Bold text -->
+        <item name="android:textAllCaps">false</item> <!-- No auto-uppercase -->
+        <item name="android:padding">8dp</item>
+    </style>
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
+</resources>

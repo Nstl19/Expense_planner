@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/styledbg"
+    tools:context=".UpdateBudgetActivity">
+
+    <!-- Title Text "Create Budget" -->
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="Update Budget"
+        android:fontFamily="@font/tinos_bold_font"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Name (Budget for what) -->
+    <EditText
+        android:id="@+id/name_text"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/button_outline"
+        android:hint="Enter Name"
+        android:textColorHint="#434242"
+        android:inputType="textMultiLine"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_text"/>
+
+    <!-- Period Selection -->
+    <LinearLayout
+        android:id="@+id/budget_period"
+        android:layout_width="250dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_outline"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_text"
+        app:layout_constraintWidth_percent="0.9">
+
+        <TextView
+            android:id="@+id/period_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Period"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+        <RadioGroup
+            android:id="@+id/period_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <RadioButton
+                android:layout_marginTop="15dp"
+                android:id="@+id/radio_weekly"
+                android:layout_marginLeft="-3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weekly"
+                android:textColor="@android:color/black"/>
+
+            <RadioButton
+                android:id="@+id/radio_monthly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monthly"
+                android:textColor="@android:color/black"/>
+
+            <RadioButton
+                android:id="@+id/radio_yearly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-7dp"
+                android:text="Yearly"
+                android:textColor="@android:color/black"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <!-- Enter Amount -->
+    <EditText
+        android:id="@+id/amount_text"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_outline"
+        android:hint="Enter Amount"
+        android:textColorHint="#434242"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/budget_period"/>
+
+    <!-- Date Selection -->
+    <LinearLayout
+        android:id="@+id/date_selection"
+        android:layout_width="310dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_outline"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/amount_text"
+        app:layout_constraintWidth_percent="0.9">
+
+        <TextView
+            android:id="@+id/date_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Dates"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"/>
+
+        <LinearLayout
+            android:layout_marginTop="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/CustomButtonStyle"
+                android:id="@+id/start_date_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Date"/>
+
+            <TextView
+                android:id="@+id/start_date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not Set"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:paddingStart="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/CustomButtonStyle"
+                android:id="@+id/end_date_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="End Date"/>
+
+            <TextView
+                android:id="@+id/end_date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not Set"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:paddingStart="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Update Budget Button -->
+    <Button
+        style="@style/CustomButtonStyle"
+        android:id="@+id/update_budget_button"
+        android:layout_width="310dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="5dp"
+        android:text="Update Budget"
+        android:textStyle="bold"
+        android:backgroundTint="#000000"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/date_selection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <!-- Delete Budget Button -->
+    <Button
+        style="@style/CustomButtonStyle"
+        android:id="@+id/delete_budget_button"
+        android:layout_width="310dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="0dp"
+        android:text="Delete Budget"
+        android:textStyle="bold"
+        android:backgroundTint="#000000"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/update_budget_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <!-- Bottom Navigation Bar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Transaction Button -->
+        <LinearLayout
+            android:id="@+id/nav_transaction"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#4CAF50"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/nav_home"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.33">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/transactionlogo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transaction"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Home Button -->
+        <LinearLayout
+            android:id="@+id/nav_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#4CAF50"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/nav_settings"
+            app:layout_constraintStart_toEndOf="@id/nav_transaction"
+            app:layout_constraintWidth_percent="0.34">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/homelogo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Settings Button -->
+        <LinearLayout
+            android:id="@+id/nav_settings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#4CAF50"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/nav_home"
+            app:layout_constraintWidth_percent="0.33">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/settinglogo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
