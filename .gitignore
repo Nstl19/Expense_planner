@@ -1,15 +1,28 @@
+# Android Studio files
+.idea/
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+
+# Gradle files
+.gradle/
+build/
+
+# Local properties (machine-specific config)
+local.properties
+
+# Keystore files (important for signing APKs)
+*.jks
+*.keystore
+
+# Firebase file (contains sensitive API keys)
+google-services.json
+
+# OS-generated files
 .DS_Store
-/build
+Thumbs.db
+
+# Misc build output folders
 /captures
 .externalNativeBuild
 .cxx
-local.properties
+
+
