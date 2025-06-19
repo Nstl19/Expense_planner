@@ -1,7 +1,7 @@
 # 💸 Expense Planner
 
 A personal finance tracker Android app that helps users **plan budgets**, **track transactions**, and **visualize expenses** through **interactive charts**. Built with Firebase and MPAndroidChart for real-time and insightful financial management.
-The is not configured properly currently and so it doesn't look visually good on all android devices. I may update the layout or rework the front end later on.
+The app is not configured properly currently and so it doesn't look visually good on all android devices. I may update the layout or rework the front end later on.
 
 ---
 
